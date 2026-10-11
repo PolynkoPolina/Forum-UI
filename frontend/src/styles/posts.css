@@ -1,0 +1,39 @@
+.posts-list{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1.2rem;
+}
+
+.posts-list .post-card{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: top;
+    border-bottom: 1px solid var(--border);
+    width: 75%;
+    height: fit-content;
+    gap: 0.4rem;
+    padding: 0.8rem 0.8rem 0.8rem 0rem;
+}
+
+.post-card:hover{
+    background-color: var(--code-bg);
+}
+
+.post-card .title{
+    font-size: 1.4rem;
+    color: var(--text-h);
+    @media (max-width: 1024px) {
+    font-size: 1.2rem;
+  }
+}
+
+.post-card .category{
+    font-size: 95%;
+    color: var(--accent-border);
+}
+
+.post-card .author-id{
+    font-size: 95%;
+}
