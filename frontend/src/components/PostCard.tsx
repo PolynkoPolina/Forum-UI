@@ -8,7 +8,7 @@ function PostCard({post}: PostCardProps){
     return (
         <article className="post-card">
             <p className="author-id">
-                Author id: {post.authorId}
+                Author: {post.author.email}
             </p>
             <h3 className="title">
                 {post.title}
@@ -17,7 +17,7 @@ function PostCard({post}: PostCardProps){
                 {post.content}
             </p>
             <span className="category">
-                #{post.category}
+                #{post.category.name}
             </span>
         </article>
     )
