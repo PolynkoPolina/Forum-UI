@@ -105,6 +105,10 @@ main{
   display: flex;
   flex-direction: column;
   align-items: start;
-  padding: 3rem 4vw;
+  padding: 5rem 4vw;
+}
+
+button{
+  cursor: pointer;  
 }
 

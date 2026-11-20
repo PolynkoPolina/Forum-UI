@@ -1,5 +1,6 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import type { Post } from "../types/posts";
+import type { RegisterRequest, RegisterResponse } from "../types/register";
 
 export const baseAPI = createApi({
     reducerPath: 'api',
@@ -9,8 +10,15 @@ export const baseAPI = createApi({
     endpoints: (builder) => ({
         getPosts: builder.query<Post[], void>({
             query: () => "/posts"
+        }),
+        register: builder.mutation<RegisterResponse, RegisterRequest>({
+            query:(data)=>({
+                url: "auth/register",
+                method: "POST",
+                body: data
+            })
         })
     })
 });
 
-export const { useGetPostsQuery } = baseAPI;
+export const { useGetPostsQuery, useRegisterMutation } = baseAPI;
